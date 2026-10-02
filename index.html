@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="WhatsApp Image 2026-09-19 at 14.24.36.jpeg" type="image/jpg" style="width: 50px; height: 50px; border-radius: 50%;">
+    <title>V-Serv</title>
+    <link rel="stylesheet" href="Vserv.css">
+</head>
+<body>
+    <header>
+        <img src="WhatsApp Image 2026-09-19 at 14.24.36.jpeg" alt="V-Serv Logo" style="width: 100px; height: 100px; border-radius: 50%;">
+        <h1  style="color: #5304fc; font-size: 32px; font-family: Algerian ;">V-Serv</h1>
+        <nav>
+            <ul>
+                <li><a href="#about"><b>About</b></a></li>
+                <li><a href="#Offerings"><b>List Of Offerings</b></a></li>
+                <li><a href="#form"><b>Bookings</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <li><a href="#feedback"><b>Feedback</b></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+
+    
+
+    <main>
+                                                        <!--About-->
+        <section id="about">
+
+
+            <h3 style="text-align: center;"><b>About</b></h3>
+            <p>
+                At V-Serv, we believe that finding reliable and professional services should be simple, convenient, and stress-free.
+                V-Serv is a service platform designed to connect customers with trusted professionals for a wide 
+                range of everyday needs — from home cleaning and repairs to maintenance and other essential services. 
+                Our goal is to make quality services easily accessible, right when you need them.
+            </p>
+            <p>
+                Why V-Serv?<br>
+
+               We focus on making the entire service experience smooth independent. 
+               From discovering the right service to getting it completed, V-Serv is designed with convenience, quality, and customer satisfaction in mind.
+
+                Our mission is simple:
+                To connect people with skilled professionals and make everyday services easier, 
+                faster, and more reliable.
+
+                Whether you need a quick repair, a home service, or 
+                professional assistance, V-Serv is here to serve you.<br>
+
+                <i><b>V-Serv — Your Service, Our Priority.</b></i>
+            </p>
+            <h5>Utilities</h5>
+            <ol>
+                <li>Water</li>
+                <li>Health</li>
+                <li>Services</li>
+                <li>Consultation</li>
+            </ol>
+        </section>
+
+                                                       <!--List Of offerings-->
+        
+        <section id="Offerings">
+            <h3><b>Offerings</b></h3>
+            <div class="card">
+                <div class="water">
+
+    <img src="WhatsApp Image 2026-09-19 at 12.37.37 (2).jpeg"
+         alt="Water"
+         style="width: 100px; height: 100px;">
+
+    <h3>Water</h3>
+
+    <h4>
+        <i>If There Is Magic On Earth, Then It Is Contained In Water</i>
+    </h4>
+
+    <select id="waterService" onchange="showProfessionals()">
+
+        <option value="">
+            -- Choose the Sub-Service --
+        </option>
+
+        <option value="Purified Water">
+            Purified Water
+        </option>
+
+        <option value="Water Recycling">
+            Water Recycling
+        </option>
+
+        <option value="Rainwater Harvesting">
+            Rainwater Harvesting
+        </option>
+
+    </select>
+
+    <!-- Professionals will appear here -->
+    <div id="waterprofessionalList"></div>
+
+
+                    
+                    
+                </div>
+                <div class="Health">
+                    <img src="WhatsApp Image 2026-09-19 at 12.37.37 (3).jpeg" alt="Health" style="width: 100px; height: 100px;">
+                    <h3>Health</h3>
+                    <h4><i>There is no medicine like hope, no incentive so great, and no tonic so powerful as expectation of something tomorrow</i></h4>
+                    <select value="Health" id="HealthService" onchange="showProfessionals()">
+                        <option value=""> -- Choose the Sub-Service --</option>
+                        <option>Medicine</option>
+                        <option>Tests</option>
+                    </select>
+                    <div id="healthprofessionalList"></div>
+                </div>
+                
+                <div class="Services">
+                    <img src="WhatsApp Image 2026-09-19 at 12.37.37.jpeg" alt="Services" style="width: 100px; height: 100px;">
+                    <h3>Services </h3>
+                    <h4><i>Service to others is the rent you pay for your room here on earth</i></h4>
+                    <select value="Services" id="Services" onchange="showProfessionals()">
+                        <option value=""> -- Choose the Sub-Service --</option>
+                        <option>Plumber</option>
+                        <option>Carpenter</option>
+                        <option>Electrician</option>
+                    </select>
+                    <div id="serviceprofessionalList"></div>
+                </div>
+                
+                <div class="Consultation">
+                    <img src="WhatsApp Image 2026-09-19 at 12.37.37 (1).jpeg" alt="Consultation" style="width: 100px; height: 100px;">
+                    <h3>Consultation</h3>
+                    <h4><i>Consultation is the key to unlocking potential and achieving success</i></h4>
+                    <select value="Consultation" id="Consultation" onchange="showProfessionals()">
+                        <option value=""> -- Choose the Sub-Service --</option>
+                        <option>Medical Consultation</option>
+                        <option>Technical Consultation</option>
+                    </select>
+                    <div id="conprofessionalList"></div>
+                </div>
+            </div>
+                                                           <!--Bookings Form-->
+            <section id="form">
+                <h3 style="text-align: center;"><b>Request Form</b></h3>
+                <form>
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" placeholder="Name"><br>
+
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" placeholder="E-mail"><br>
+
+                    <label for="Mobile No.">Mobile No.</label>
+                    <input type="number" id="Number" placeholder="Mobile No."><br>
+
+                    <label for="Service">Select the Service:</label>
+
+<select id="Service" onchange="updateSubServices()">
+    <option value="">-- Choose the type --</option>
+    <option value="Water">💧 Water</option>
+    <option value="Health">🏥 Health</option>
+    <option value="Services">🛎️ Services</option>
+    <option value="Consultation">💬 Consultation</option>
+</select>
+
+<br>
+
+<label for="SubService">Select the Sub-Service:</label>
+
+<select id="SubService">
+    <option value="">-- Choose the Sub-Service --</option>
+</select>
+
+<br>
+                    <label for="Date">Select Date</label>
+                    <input type="date" id="Date"><br>
+
+                    <label for="Time">Select Time</label>
+                    <input type="time" id="Time"><br>
+
+                    
+                    <label for="Note">Note</label>
+                    <textarea id="Note" placeholder="Write your note here..." style="width: 100%; height: 100px;"></textarea><br>
+
+                    <button type="submit" >Submit</button>
+                </form>
+            </section>
+
+             <section id="contact">
+
+            <h2><b>Contact Me</b></h2>
+            <h4>24/7  Assistance Available</h4>
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    lavanya.26xxxxxxxx@sst.scaler.com
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/lavanya-tiwari-54234741b/">
+                    <img src="https://static.cdnlogo.com/logos/l/15/linkedin-2013.svg" style="width: 100px;">
+                </a>
+            </p>
+            <p>
+                Mobile No.:
+                <a href="tel:+91778303xxxx">
+                    +91 778303xxxx
+                </a>
+            </p>
+
+        </section>
+        <section id="feedback">
+            <h2>Feedback</h2>
+            <p>
+                We value your feedback! Please share your thoughts and suggestions to help us improve our services.
+            </p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+                <label for="feedback">Your Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..."></textarea><br>
+                <button type="submit">Submit </button>
+            </form>
+        
+    </main>
+
+    </div>
+</div>
+    <script src="Vsev.js"></script>
+
+</body>
+</html>
